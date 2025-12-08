@@ -1,0 +1,3 @@
+## Feedback
+
+Nice idea, and the setup actually gives you a pretty controlled testbed. For experiments, I’d suggest first validating whether simple flow-level aggregates (packet count, total bytes, burst timing) correlate with token ranges in your labeled captures, then run a small comparison between an MLP baseline and a lightweight regression model across multiple controlled prompts (short vs long outputs, streamed vs non-streamed) to see how stable the prediction is when you vary provider, model, and output length.
