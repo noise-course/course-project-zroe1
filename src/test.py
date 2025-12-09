@@ -1,4 +1,7 @@
 import requests
+import os
+
+openrouter_key = os.environ.get("OPENROUTER_API_KEY")
 
 
 # the code for calling the open router api was found in the open router website
@@ -7,7 +10,7 @@ from openai import OpenAI
 
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key=openrouter_key,
 )
 
 completion = client.chat.completions.create(
@@ -20,4 +23,7 @@ completion = client.chat.completions.create(
   ]
 )
 
-print(completion.choices[0].message.content)
+# print(completion.choices[0].message.content)
+print(completion.usage.prompt_tokens)
+print(completion.usage.completion_tokens)
+print(completion.usage.cost)
