@@ -1,5 +1,6 @@
 import requests
 import os
+import time
 
 openrouter_key = os.environ.get("OPENROUTER_API_KEY")
 
@@ -27,3 +28,8 @@ completion = client.chat.completions.create(
 print(completion.usage.prompt_tokens)
 print(completion.usage.completion_tokens)
 print(completion.usage.cost)
+
+
+time.sleep(10)
+response = requests.get('https://zephaniahdev.com/')
+time.sleep(10)
