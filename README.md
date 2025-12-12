@@ -2,7 +2,7 @@
 
 `mlsystemsfinal.pdf` is my final writeup and `main.ipynb` is my final code. The files in `src` are used for data collection.
 
-You must be in the `final` dir to run all the code.
+You must be in the `final` dir to run the notebook.
 
 **I document where I used LLMs in my code in comments. I also used LLMs to help me format my LaTeX**.
 
